@@ -1,7 +1,7 @@
 <?php
 defined('COM') or die('no access');
 
-class db{
+class db_mysqli{
 	
 }
 ?>
