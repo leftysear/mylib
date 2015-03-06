@@ -1,9 +1,9 @@
 <?php
 defined('CONF') or die('no access');
 $conf['db'] = array();
-$conf['db']['conf'] = 'mysql.db.php';
-$conf['db']['type'] = 'mysql';
-$conf['db']['com'] = 'mysql.db.php';
-$conf['db']['class'] = 'db_mysql';
+$conf['db']['conf'] = 'mysqli.db.php';
+$conf['db']['type'] = 'mysqli';
+$conf['db']['com'] = 'mysqli.db.php';
+$conf['db']['class'] = 'db_mysqli';
 include_once(CONF.'db/'.$conf['db']['conf']);
 ?>

@@ -6,6 +6,7 @@ class db_mysql{
 	
 	public function __construct($conf){
 		$this->conf = $conf;
+		$this->connect();
 	}
 	
 	function connect(){
@@ -82,7 +83,9 @@ class db_mysql{
 	}
 	
 	function __destruct(){
-		mysql_close($this->conn) or $this->half();
+		if($this->conn){
+			mysql_close($this->conn) or $this->half();
+		}
 	}
 }
 ?>
