@@ -2,7 +2,7 @@
 defined('COM') or die('no access');
 
 class db{
-	public $lib;
+	private $lib;
 	
 	public function __construct($conf){
 		include_once(COM.'db/'.$conf['com']);
