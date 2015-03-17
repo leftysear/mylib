@@ -1,13 +1,13 @@
 <?php
 defined('COM') or die('no access');
 
-class xcom{
-	public $libs = array();
+class other{
+	private $libs = array();
 	
 	public function __construct($conf){
-		if($conf['use']['db']){
-			include_once(COM.'db/db.php');
-			$this->db = new db($conf['db']);
+		foreach($conf['use'] as $use){
+			include_once(COM.'other/'.$use.'.other.php');
+			$this->libs[$use] = new $conf[$use]['class_name']($conf[$use]);
 		}
 	}
 	

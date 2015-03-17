@@ -6,4 +6,6 @@ $conf['use']['db'] = true;
 if($conf['use']['db']){
 	include_once(CONF.'db/db.php');
 }
+
+include_once(CONF.'other/other.php');
 ?>
